@@ -22,6 +22,8 @@ add_compile_options(-std:c++17 -D_ITERATOR_DEBUG_LEVEL=0 -MT -MD)
 
 add_executable(${PROJECT_NAME}
 	SourceFiles/main.cpp
+	SourceFiles/SocketManager.h
+	SourceFiles/SocketManager.cpp
 	SourceFiles/Server.h
 	SourceFiles/Server.cpp
 )

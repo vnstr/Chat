@@ -21,6 +21,7 @@ class Server final {
   ~Server();
 
   void Listen(const std::string &node_name, int port);
+  void StopListen();
 
  private:
   void Release();
@@ -30,7 +31,7 @@ class Server final {
   SOCKET listen_{INVALID_SOCKET};
   SOCKET client_{INVALID_SOCKET};
 
-  addrinfo *addr_info_{nullptr};
+  addrinfo *addrInfo_{nullptr};
 };
 
 }  // namespace chat
